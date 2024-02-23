@@ -1,0 +1,14 @@
+@import "../bootstrap/scss/functions";
+
+$light: #f8fcfc;
+$dark: #030707;
+$primary: #c834ff;
+$secondary: #2aa5fc;
+$info: #fff600;
+$success: #10a103;
+$warning: #f7c104;
+$danger: #e92500; 
+
+@import "../bootstrap/scss/bootstrap";
+
+@import ".\\variables_dark";
