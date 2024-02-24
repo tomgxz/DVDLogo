@@ -1,0 +1,21 @@
+html, body, main {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#logo {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    #logo-inner {
+        width: clamp(10rem, 50vw, 16rem);
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
