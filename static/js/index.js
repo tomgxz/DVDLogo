@@ -1,6 +1,7 @@
 const logo_wrapper = $("#logo-wrapper"),
 	  logo = $("#logo"),
-	  logo_inner = $("#logo-inner");
+	  logo_inner = $("#logo-inner"),
+	  change_color = false;
 
 var viewport_width, viewport_height, logo_width, logo_height, vertical,
 	speed = 350; // In pixels per second
@@ -14,6 +15,7 @@ const get_sizes = () => {
 };
 
 const bump_edge = function () {
+	if (!change_color) return
 	var deg = Math.floor(Math.random() * 360);
 	logo_inner.css({"filter":`hue-rotate(${deg}deg)`});
 }
