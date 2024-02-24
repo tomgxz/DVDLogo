@@ -16,6 +16,28 @@ html, body, main {
         width: clamp(10rem, 50vw, 16rem);
         object-fit: cover;
         object-position: center;
+
+        path {
+            fill: none;
+            stroke-width: 8px;
+            stroke-dashoffset: 0px;
+            stroke-dasharray: 300;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+;
+
+            &.st0 {
+                fill-rule:evenodd;
+                clip-rule:evenodd;
+                stroke: #FFFFFF;
+                --fill-to: #FFFFFF;
+            }
+
+            &.st1 {
+                stroke: #CF1047;
+                --fill-to: #CF1047;
+            }
+        }
     }
 }
 

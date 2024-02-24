@@ -1,7 +1,8 @@
 const logo_wrapper = $("#logo-wrapper"),
 	  logo = $("#logo"),
 	  logo_inner = $("#logo-inner"),
-	  change_color = false;
+	  change_color = false,
+	  stop = false;
 
 var viewport_width, viewport_height, logo_width, logo_height, vertical,
 	speed = 350; // In pixels per second
@@ -49,7 +50,31 @@ const move = {
 
 get_sizes();
 
-move.down();
-move.right();
-
 $(window).resize(get_sizes);
+
+logo.css({top: (viewport_height - logo_height)/2,left: (viewport_width - logo_width)/2})
+
+// PATH STUFF
+
+gsap.registerPlugin(ScrollTrigger)
+
+const paths = $("#logo-inner path"),
+	  paths_white = $("#logo-inner path.st0"),
+	  paths_red = $("#logo-inner path.st1");
+
+gsap.fromTo(logo, {scale: 3}, {scale: 1, duration: 4})
+
+gsap.fromTo(paths, {strokeDashoffset: 300, strokeDasharray: 300}, { strokeDashoffset: 0, strokeDasharray: 700, duration: 5 });
+gsap.fromTo(paths_white, {fill: "none"}, {fill: "#FFFFFF", duration: 1.5, delay: 3.5});
+gsap.fromTo(paths_red, {fill: "none"}, {fill: "#CF1047", duration: 1.5, delay: 3.5});
+
+gsap.to(paths, {strokeWidth: 0, duration: 0, delay: 5})
+
+setTimeout(function(){
+	if (!stop) {
+		move.down();
+		move.right();
+	}
+},5000)
+
+$("#icon path").css({"stroke-dasharray":"0"})

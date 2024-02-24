@@ -11631,5 +11631,23 @@ html, body, main {
   object-fit: cover;
   object-position: center;
 }
+#logo #logo-inner path {
+  fill: none;
+  stroke-width: 8px;
+  stroke-dashoffset: 0px;
+  stroke-dasharray: 300;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+#logo #logo-inner path.st0 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke: #FFFFFF;
+  --fill-to: #FFFFFF;
+}
+#logo #logo-inner path.st1 {
+  stroke: #CF1047;
+  --fill-to: #CF1047;
+}
 
 /*# sourceMappingURL=build.css.map */
