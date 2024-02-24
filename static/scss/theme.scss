@@ -1,7 +1,7 @@
 @import "../bootstrap/scss/functions";
 
 $light: #f8fcfc;
-$dark: #030707;
+$dark: #000000;
 $primary: #c834ff;
 $secondary: #2aa5fc;
 $info: #fff600;
@@ -11,4 +11,8 @@ $danger: #e92500;
 
 @import "../bootstrap/scss/bootstrap";
 
-@import ".\\variables_dark";
+@import "./variables_dark";
+
+body {
+    background-color: black !important;
+}
