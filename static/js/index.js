@@ -5,7 +5,7 @@ const logo_wrapper = $("#logo-wrapper"),
 	  stop = false;
 
 var viewport_width, viewport_height, logo_width, logo_height, vertical,
-	speed = 350; // In pixels per second
+	speed = 250; // In pixels per second
 
 const get_sizes = () => {
 	viewport_width = logo_wrapper.outerWidth();
